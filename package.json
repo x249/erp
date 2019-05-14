@@ -1,7 +1,7 @@
 {
   "name": "erp-x249",
   "version": "1.0.0",
-  "description": "Enterprise Resource Management web app",
+  "description": "Enterprise Resource Planning Web App",
   "author": "x249",
   "private": true,
   "scripts": {
