@@ -1,6 +1,6 @@
-# erp-x249
+# ERP
 
-> Enterprise Resource Management web app
+> Enterprise Resource Planning web app
 
 ## Build Setup
 
