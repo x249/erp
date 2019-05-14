@@ -1,5 +1,8 @@
 # ERP
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/x249/erp.svg?style=flat-square)
+![GitHub](https://img.shields.io/github/license/x249/erp.svg?style=flat-square)
+
 > Enterprise Resource Planning web app
 
 ## Build Setup
