@@ -80,6 +80,8 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/dotenv',
+    '@nuxtjs/toast',
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
   ],
