@@ -1,5 +1,4 @@
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
-import pkg from './package'
 
 export default {
   mode: 'universal',
@@ -8,11 +7,11 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: 'Enterprise Resource Planning',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: 'Manage your Enterprise efficiently' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -27,17 +26,50 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#2196F3', height: '2px' },
 
   /*
    ** Global CSS
    */
   css: ['~/assets/style/app.styl'],
 
+	/*
+	 ** Page Routing Transition
+	 */
+	transition: {
+		name: "fade",
+		mode: "out-in"
+	},
+
+	/*
+	 ** Toast module configuration
+	 */
+	toast: {
+		position: "top-right",
+		singleton: true,
+		closeOnSwipe: true,
+		theme: "bubble",
+		duration: "3000"
+	},
+
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/vuetify', '@/plugins/chart'],
+  plugins: ['@/plugins/vuetify', {src:'@/plugins/chart', ssr: false}],
+
+	/*
+	 ** Manifest setup
+	 */
+	manifest: {
+		name: "Enterprise Resource Planning Web App",
+		short_name: "ERP",
+		lang: "en",
+		display: "standalone",
+		start_url: "/",
+		orientation: "portrait",
+		background_color: "#fff",
+		theme_color: "#2196f3"
+	},
 
   /*
    ** Nuxt.js modules
