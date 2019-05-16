@@ -31,7 +31,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/style/app.styl'],
+  css: ['~/assets/style/app.styl', '~/assets/stylesheets/main.css'],
 
 	/*
 	 ** Page Routing Transition
