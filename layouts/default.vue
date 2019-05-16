@@ -76,6 +76,11 @@ export default {
           to: '/dashboard'
         },
         {
+          icon: 'assignment',
+          title: 'Projects',
+          to: '/projects'
+        },
+        {
           icon: 'calendar_today',
           title: 'Calendar',
           to: '/calendar'
