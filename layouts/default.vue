@@ -52,9 +52,9 @@ export default {
       miniVariant: false,
       items: [
         {
-          icon: 'apps',
-          title: 'Welcome',
-          to: '/'
+          icon: 'dashboard',
+          title: 'Dashboard',
+          to: '/dashboard'
         },
         {
           icon: 'bubble_chart',
