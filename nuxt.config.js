@@ -36,7 +36,7 @@ export default {
 	/*
 	 ** Page Routing Transition
 	 */
-	transition: {
+	pageTransition: {
 		name: "fade",
 		mode: "out-in"
 	},
