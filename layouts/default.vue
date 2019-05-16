@@ -1,5 +1,5 @@
 <template>
-  <v-app :dark="darkMode">
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       class="white"
@@ -65,7 +65,6 @@
 export default {
   data() {
     return {
-      darkMode: false,
       drawer: true,
       fixed: false,
       miniVariant: false,
