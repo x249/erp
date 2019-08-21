@@ -44,7 +44,7 @@
     "eslint-plugin-vue": "5.2.3",
     "nodemon": "1.19.1",
     "prettier": "1.18.2",
-    "stylus": "0.54.5",
+    "stylus": "0.54.7",
     "stylus-loader": "3.0.2"
   }
 }
