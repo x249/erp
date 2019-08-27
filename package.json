@@ -24,7 +24,7 @@
     "hchs-vue-charts": "1.2.8",
     "js-cookie": "2.2.0",
     "nuxt": "2.8.1",
-    "vuetify": "2.0.4",
+    "vuetify": "2.0.11",
     "vuetify-loader": "1.2.2"
   },
   "devDependencies": {
