@@ -2,22 +2,30 @@
   <v-layout class="py-5" row>
     <v-flex xs12>
       <v-card class="mx-auto text-center slight-br main-gradient inset-shadow" flat dark>
-        <v-sheet color="transparent" height="500px" width="100%">
+        <v-sheet color="transparent" height="auto">
           <v-sparkline
             :value="sparklineValues"
+            :labels="sparklineValues"
             color="rgba(255, 255, 255, .7)"
             height="100"
             :auto-draw="true"
             :auto-draw-duration="5000"
-            :auto-line-width="50"
-            padding="10"
+            :auto-line-width="10"
+            padding="24"
             stroke-linecap="round"
             smooth
-          />
+          >
+            <template v-slot:label="item">
+              ${{ item.value }}
+            </template>
+          </v-sparkline>
         </v-sheet>
-        <v-card-text>
+        <v-card-text class="mt-10">
           <div class="display-4 font-weight-thin">
             Welcome to x249 ERP
+          </div>
+          <div class="display-1 font-weight-medium mt-2">
+            Your numbers presented beautifully.
           </div>
         </v-card-text>
         <v-divider />
@@ -46,7 +54,7 @@ export default {
   computed: {
     sparklineValues () {
       const values = []
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 8; i++) {
         values.push(this.generateRandomNumber())
       }
       return values
@@ -54,7 +62,7 @@ export default {
   },
   methods: {
     generateRandomNumber () {
-      return Math.floor(Math.random() * 1000)
+      return Math.floor(Math.random() * 50000)
     }
   }
 }
