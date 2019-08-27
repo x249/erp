@@ -73,7 +73,7 @@ export default {
       description: 'Next Generation Enterprise Resource Planning for the Republic of Sudan',
       locale: 'en-US',
       twitter: '@_phr3nzy',
-      img: '/favicon.ico',
+      img: '/icon.png',
       themeColor: '#2196F3'
     }],
     'nuxt-webfontloader',
