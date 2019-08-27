@@ -19,6 +19,9 @@
             color="white"
             line-width="2"
             padding="16"
+            :auto-draw="true"
+            :auto-draw-duration="1000"
+            :auto-line-width="50"
           />
         </v-sheet>
         <v-card-text class="pt-0">
@@ -60,6 +63,9 @@
             color="white"
             line-width="2"
             padding="16"
+            :auto-draw="true"
+            :auto-draw-duration="1000"
+            :auto-line-width="50"
           />
         </v-sheet>
         <v-card-text class="pt-0">
@@ -99,6 +105,9 @@
             color="white"
             line-width="2"
             padding="16"
+            :auto-draw="true"
+            :auto-draw-duration="1000"
+            :auto-line-width="50"
           />
         </v-sheet>
         <v-card-text class="pt-0">
@@ -142,7 +151,7 @@
             :height="300"
             :datalabel="'Sales'"
             :labels="['January', 'February', 'March', 'April', 'May', 'June', 'July']"
-            :data="[100, 55, 80, 122, 55, 22, 80]"
+            :data="[55000, 23500, 15000, 80000, 250000, 150000, 300000]"
             :fill="true"
             :option="lineOptions"
           />

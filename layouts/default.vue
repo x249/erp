@@ -42,7 +42,7 @@
         </v-list-item>
         <v-list-item to="/dashboard">
           <v-list-item-icon>
-            <v-icon>{{ mdiViewDashboard }}</v-icon>
+            <v-icon>{{ mdiDesktopMacDashboard }}</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Dashboard</v-list-item-title>
         </v-list-item>
@@ -91,13 +91,13 @@
 </template>
 
 <script>
-import { mdiAccount, mdiHome, mdiViewDashboard, mdiAccountGroup, mdiCurrencyUsd, mdiSettings, mdiInformation, mdiLogout } from '@mdi/js'
+import { mdiAccount, mdiHome, mdiDesktopMacDashboard, mdiAccountGroup, mdiCurrencyUsd, mdiSettings, mdiInformation, mdiLogout } from '@mdi/js'
 export default {
   data () {
     return {
       mdiAccount,
       mdiHome,
-      mdiViewDashboard,
+      mdiDesktopMacDashboard,
       mdiAccountGroup,
       mdiCurrencyUsd,
       mdiSettings,
