@@ -1,9 +1,6 @@
-# ERP
+# x249-erp
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/x249/erp.svg?style=flat-square)
-![GitHub](https://img.shields.io/github/license/x249/erp.svg?style=flat-square)
-
-> Enterprise Resource Planning web app
+> x249 Enterprise Resource Planning
 
 ## Build Setup
 
@@ -12,14 +9,14 @@
 $ yarn install
 
 # serve with hot reload at localhost:3000
-$ yarn run dev
+$ yarn dev
 
 # build for production and launch server
-$ yarn run build
+$ yarn build
 $ yarn start
 
 # generate static project
-$ yarn run generate
+$ yarn generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

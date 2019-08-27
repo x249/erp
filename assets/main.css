@@ -1,0 +1,31 @@
+body {
+  font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}
+
+.slight-br {
+  border-radius: 30px!important;
+}
+
+.main-gradient {
+  background: linear-gradient(to right bottom, rgb(255, 17, 0), rgb(217, 0, 255))!important;
+}
+
+.inset-shadow {
+  box-shadow: inset -5px 5px 10px hsla(0, 0%, 20%, 0.3),
+		inset 5px -5px 10px hsla(0, 0%, 20%, 0.3)!important;
+}
+
+.inset-shadow-dark {
+  box-shadow: inset -5px 5px 10px hsla(0, 0%, 20%, 0.5),
+		inset 5px -5px 10px hsla(0, 0%, 20%, 0.5)!important;
+}

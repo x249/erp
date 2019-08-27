@@ -1,113 +1,108 @@
 <template>
   <v-app>
     <v-navigation-drawer
-      v-model="drawer"
-      class="white"
-      :mini-variant="miniVariant"
-      :clipped="true"
-      :floating="true"
-      fixed
+      expand-on-hover
+      permanent
+      width="275px"
       app
     >
-      <v-list>
-        <v-list-tile
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title v-text="item.title" />
-          </v-list-tile-content>
-        </v-list-tile>
+      <template v-slot:prepend>
+        <v-list>
+          <v-list-item
+            to="/profile"
+            two-line
+          >
+            <v-list-item-avatar>
+              <v-img src="https://randomuser.me/api/portraits/men/85.jpg" />
+            </v-list-item-avatar>
+            <v-list-item-content>
+              <v-list-item-title class="title">
+                John Adams
+              </v-list-item-title>
+              <v-list-item-subtitle>Manager</v-list-item-subtitle>
+            </v-list-item-content>
+            <v-list-item-action>
+              <v-icon>{{ mdiAccount }}</v-icon>
+            </v-list-item-action>
+          </v-list-item>
+        </v-list>
+      </template>
 
-        <v-list-group prepend-icon="security">
-          <template v-slot:activator>
-            <v-list-tile>
-              <v-list-tile-title>Admin</v-list-tile-title>
-            </v-list-tile>
-          </template>
-          <v-list-tile v-for="(page, i) in adminPages" :key="i" :to="page.to">
-            <v-list-tile-action>
-              <v-icon>{{ page.icon }}</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>{{ page.title }}</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list-group>
+      <v-divider />
+
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item to="/">
+          <v-list-item-icon>
+            <v-icon>{{ mdiHome }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Home</v-list-item-title>
+        </v-list-item>
+        <v-list-item to="/dashboard">
+          <v-list-item-icon>
+            <v-icon>{{ mdiViewDashboard }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Dashboard</v-list-item-title>
+        </v-list-item>
+        <v-list-item to="/employees">
+          <v-list-item-icon>
+            <v-icon>{{ mdiAccountGroup }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Employees</v-list-item-title>
+        </v-list-item>
+        <v-list-item to="/finance">
+          <v-list-item-icon>
+            <v-icon>{{ mdiCurrencyUsd }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Finance</v-list-item-title>
+        </v-list-item>
+        <v-list-item to="/settings">
+          <v-list-item-icon>
+            <v-icon>{{ mdiSettings }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Settings</v-list-item-title>
+        </v-list-item>
+        <v-list-item to="/about">
+          <v-list-item-icon>
+            <v-icon>{{ mdiInformation }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>About</v-list-item-title>
+        </v-list-item>
       </v-list>
+      <template v-slot:append>
+        <v-list>
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>{{ mdiLogout }}</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Sign Out</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </template>
     </v-navigation-drawer>
-
-    <v-toolbar color="primary" :clipped-left="true" dark flat fixed app>
-      <v-toolbar-side-icon @click="miniVariant = !miniVariant" />
-    </v-toolbar>
-
     <v-content>
       <v-container>
         <nuxt />
       </v-container>
     </v-content>
-
-    <v-footer color="primary" dark :fixed="fixed" app>
-      <v-flex text-xs-center>
-        <span>&copy; 2019</span>
-      </v-flex>
-    </v-footer>
   </v-app>
 </template>
 
 <script>
+import { mdiAccount, mdiHome, mdiViewDashboard, mdiAccountGroup, mdiCurrencyUsd, mdiSettings, mdiInformation, mdiLogout } from '@mdi/js'
 export default {
-  data() {
+  data () {
     return {
-      drawer: true,
-      fixed: false,
-      miniVariant: false,
-      items: [
-        {
-          icon: 'dashboard',
-          title: 'Dashboard',
-          to: '/dashboard'
-        },
-        {
-          icon: 'assignment',
-          title: 'Projects',
-          to: '/projects'
-        },
-        {
-          icon: 'calendar_today',
-          title: 'Calendar',
-          to: '/calendar'
-        },
-        {
-          icon: 'assignment_ind',
-          title: 'Employees',
-          to: '/employees'
-        },
-        {
-          icon: 'monetization_on',
-          title: 'Finance',
-          to: '/finance'
-        }
-      ],
-      adminPages: [
-        {
-          icon: 'account_circle',
-          title: 'Users',
-          to: '/admin/users'
-        },
-        {
-          icon: 'settings',
-          title: 'Settings',
-          to: '/admin/settings'
-        }
-      ],
-      title: 'Vuetify.js'
+      mdiAccount,
+      mdiHome,
+      mdiViewDashboard,
+      mdiAccountGroup,
+      mdiCurrencyUsd,
+      mdiSettings,
+      mdiInformation,
+      mdiLogout
     }
   }
 }

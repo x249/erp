@@ -1,72 +1,32 @@
-import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
+import colors from 'vuetify/es5/util/colors'
 
 export default {
   mode: 'universal',
-
   /*
-   ** Headers of the page
-   */
+  ** Headers of the page
+  */
   head: {
-    title: 'Enterprise Resource Planning',
+    titleTemplate: '%s - ' + 'x249 ERP',
+    title: 'x249 ERP',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Manage your Enterprise efficiently'
-      }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-
   /*
-   ** Customize the progress-bar color
-   */
+  ** Customize the progress-bar color
+  */
   loading: { color: '#F44336', height: '2px' },
-
   /*
-   ** Global CSS
-   */
-  css: ['~/assets/style/app.styl', '~/assets/stylesheets/main.css'],
-
-  /*
-   ** Page Routing Transition
-   */
-  pageTransition: {
-    name: 'fade',
-    mode: 'out-in'
-  },
-
-  /*
-   ** Toast module configuration
-   */
-  toast: {
-    position: 'top-right',
-    singleton: true,
-    closeOnSwipe: true,
-    theme: 'bubble',
-    duration: '3000'
-  },
-
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: ['@/plugins/vuetify', { src: '@/plugins/chart', ssr: false }],
-
-  /*
-   ** Manifest setup
-   */
+  ** Manifest setup
+  */
   manifest: {
-    name: 'Enterprise Resource Planning Web App',
-    short_name: 'ERP',
+    name: 'x249 Enterprise Resource Planning',
+    short_name: 'x249 ERP',
     lang: 'en',
     display: 'standalone',
     start_url: '/',
@@ -74,48 +34,108 @@ export default {
     background_color: '#fff',
     theme_color: '#2196f3'
   },
-
   /*
-   ** Nuxt.js modules
-   */
+  ** Global CSS
+  */
+  css: [
+    '~/assets/main'
+  ],
+  /*
+  ** Page Routing Transition
+  */
+  pageTransition: {
+    name: 'fade',
+    mode: 'out-in'
+  },
+  /*
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+    { src: '~/plugins/chart', ssr: false }
+  ],
+  /*
+  ** Nuxt.js dev-modules
+  */
+  buildModules: [
+    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/vuetify'
+  ],
+  /*
+  ** Nuxt.js modules
+  */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/dotenv',
-    '@nuxtjs/toast',
+    'nuxt-helmet',
+    ['nuxt-social-meta', {
+      url: 'https://x249-erp.herokuapp.com',
+      title: 'x249 Enterprise Resource Planning',
+      description: 'Next Generation Enterprise Resource Planning for the Republic of Sudan',
+      locale: 'en-US',
+      twitter: '@_phr3nzy',
+      img: '/favicon.ico',
+      themeColor: '#2196F3'
+    }],
+    'nuxt-webfontloader',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
   ],
   /*
-   ** Axios module configuration
-   */
+  ** Axios module configuration
+  ** See https://axios.nuxtjs.org/options
+  */
   axios: {
-    // See https://github.com/nuxt-community/axios-module#options
   },
-
   /*
-   ** Build configuration
-   */
+  ** Web font loader configuration
+  */
+  webfontloader: {
+    google: {
+      families: ['Roboto:100,300,400,500,700,900&display=swap']
+    }
+  },
+  /*
+  ** Sitemap module configuration
+  */
+  sitemap: {
+    hostname: 'https://scl-website.netlify.com',
+    gzip: true,
+    routes: ['/']
+  },
+  /*
+  ** Robots module configuration
+  */
+  robots: [{ UserAgent: '*', Disallow: '' }],
+  /*
+  ** vuetify module configuration
+  ** https://github.com/nuxt-community/vuetify-module
+  */
+  vuetify: {
+    defaultAssets: false,
+    customVariables: ['~/assets/variables.scss'],
+    theme: {
+      dark: false,
+      themes: {
+        primary: '#2196F3',
+        accent: '#9C27B0',
+        secondary: '#F44336',
+        info: colors.teal.lighten1,
+        warning: colors.amber.base,
+        error: colors.deepOrange.accent4,
+        success: colors.green.accent3
+      }
+    }
+  },
+  /*
+  ** Build configuration
+  */
   build: {
-    transpile: ['vuetify/lib'],
-    plugins: [new VuetifyLoaderPlugin()],
-    loaders: {
-      stylus: {
-        import: ['~assets/style/variables.styl']
-      }
-    },
     /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
+    ** You can extend webpack config here
+    */
+    extend (config, ctx) {
     }
   }
 }

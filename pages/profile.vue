@@ -5,7 +5,7 @@
 <script>
 export default {
   head: () => ({
-    title: 'Home'
+    title: 'Profile'
   })
 }
 </script>
