@@ -1,6 +1,8 @@
-# x249-erp
+# Enterprise Resource Planning Web App
 
-> x249 Enterprise Resource Planning
+> Built with Nuxt and Vuetify
+
+A simple ERP implementation that is easily customisable. Made for small to medium businesses.
 
 ## Build Setup
 
