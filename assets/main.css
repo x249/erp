@@ -1,6 +1,9 @@
 body {
   font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
 }
+.v-pagination__navigation, .v-pagination__item {
+  outline: none !important;
+}
 
 .fade-enter-active,
 .fade-leave-active {
