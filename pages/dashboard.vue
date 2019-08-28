@@ -21,7 +21,7 @@
             padding="16"
             :auto-draw="true"
             :auto-draw-duration="1000"
-            :auto-line-width="50"
+            :auto-line-width="true"
           />
         </v-sheet>
         <v-card-text class="pt-0">
@@ -65,7 +65,7 @@
             padding="16"
             :auto-draw="true"
             :auto-draw-duration="1000"
-            :auto-line-width="50"
+            :auto-line-width="true"
           />
         </v-sheet>
         <v-card-text class="pt-0">
@@ -107,7 +107,7 @@
             padding="16"
             :auto-draw="true"
             :auto-draw-duration="1000"
-            :auto-line-width="50"
+            :auto-line-width="true"
           />
         </v-sheet>
         <v-card-text class="pt-0">
@@ -116,7 +116,7 @@
           </div>
           <div class="subheading font-weight-light green--text">
             Increasing <v-icon color="green">
-              {{ mdiFinance }}
+              {{ mdiTrendingUp }}
             </v-icon>
           </div>
           <v-divider class="my-2" />
@@ -175,14 +175,14 @@
 </template>
 
 <script>
-import { mdiClock, mdiFinance, mdiGaugeFull } from '@mdi/js'
+import { mdiClock, mdiTrendingUp, mdiGaugeFull } from '@mdi/js'
 export default {
   head: () => ({
     title: 'Dashboard'
   }),
   data: () => ({
     mdiClock,
-    mdiFinance,
+    mdiTrendingUp,
     mdiGaugeFull,
     labels: [
       '12am',

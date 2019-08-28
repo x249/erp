@@ -10,7 +10,7 @@
             height="100"
             :auto-draw="true"
             :auto-draw-duration="5000"
-            :auto-line-width="10"
+            :auto-line-width="true"
             padding="24"
             stroke-linecap="round"
             smooth
