@@ -2,23 +2,25 @@
   <v-layout class="py-5" row>
     <v-flex xs12>
       <v-card class="mx-auto text-center slight-br main-gradient inset-shadow" flat dark>
-        <v-sheet color="transparent" height="auto">
-          <v-sparkline
-            :value="sparklineValues"
-            :labels="sparklineValues"
-            color="rgba(255, 255, 255, .7)"
-            height="100"
-            :auto-draw="true"
-            :auto-draw-duration="5000"
-            :auto-line-width="true"
-            padding="24"
-            stroke-linecap="round"
-            smooth
-          >
-            <template v-slot:label="item">
-              ${{ item.value }}
-            </template>
-          </v-sparkline>
+        <v-sheet color="transparent" min-height="400">
+          <client-only>
+            <v-sparkline
+              :value="sparklineValues"
+              :labels="sparklineValues"
+              color="rgba(255, 255, 255, .7)"
+              height="100"
+              :auto-draw="true"
+              :auto-draw-duration="5000"
+              :auto-line-width="true"
+              padding="24"
+              stroke-linecap="round"
+              smooth
+            >
+              <template v-slot:label="item">
+                ${{ item.value }}
+              </template>
+            </v-sparkline>
+          </client-only>
         </v-sheet>
         <v-card-text class="mt-10">
           <div class="display-4 font-weight-thin">
