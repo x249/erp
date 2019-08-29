@@ -72,7 +72,7 @@
       </v-list>
       <template v-slot:append>
         <v-divider />
-        <v-list class="grey lighten-3">
+        <v-list>
           <v-list-item link>
             <v-list-item-icon>
               <v-icon color="secondary">
