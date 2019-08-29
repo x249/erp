@@ -71,10 +71,13 @@
         </v-list-item>
       </v-list>
       <template v-slot:append>
-        <v-list>
+        <v-divider />
+        <v-list class="grey lighten-3">
           <v-list-item link>
             <v-list-item-icon>
-              <v-icon>{{ mdiLogout }}</v-icon>
+              <v-icon color="secondary">
+                {{ mdiLogout }}
+              </v-icon>
             </v-list-item-icon>
             <v-list-item-title>Sign Out</v-list-item-title>
           </v-list-item>
