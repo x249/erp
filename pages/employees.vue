@@ -4,7 +4,7 @@
       <v-card class="slight-br mt-10 pb-5" outlined flat>
         <v-sheet
           class="v-sheet--offset mx-auto px-4 py-8 slight-br"
-          color="secondary"
+          color="accent"
           min-height="100px"
           max-width="calc(100% - 64px)"
           elevation="6"
@@ -47,7 +47,7 @@
           <v-pagination
             v-model="page"
             :next-icon="mdiChevronRight"
-            color="secondary"
+            color="accent"
             circle
             :prev-icon="mdiChevronLeft"
             :length="pageCount"
