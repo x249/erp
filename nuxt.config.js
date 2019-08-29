@@ -48,6 +48,13 @@ export default {
     mode: 'out-in'
   },
   /*
+  ** Layout change transition
+  */
+  layoutTransition: {
+    name: 'fade',
+    mode: 'out-in'
+  },
+  /*
   ** Plugins to load before mounting the App
   */
   plugins: [
