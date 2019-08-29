@@ -1,9 +1,9 @@
 <template>
   <v-layout class="py-5" row>
     <v-flex xs12>
-      <v-card class="mx-auto text-center slight-br main-gradient inset-shadow" flat dark>
-        <v-sheet color="transparent" min-height="400">
-          <client-only>
+      <client-only>
+        <v-card class="mx-auto text-center slight-br main-gradient inset-shadow" flat dark>
+          <v-sheet color="transparent">
             <v-sparkline
               :value="sparklineValues"
               :labels="sparklineValues"
@@ -20,26 +20,26 @@
                 ${{ item.value }}
               </template>
             </v-sparkline>
-          </client-only>
-        </v-sheet>
-        <v-card-text class="mt-10">
-          <div class="display-4 font-weight-thin">
-            Welcome to x249 ERP
-          </div>
-          <div class="display-1 font-weight-medium mt-2">
-            Your numbers presented beautifully.
-          </div>
-        </v-card-text>
-        <v-divider />
-        <v-card-actions class="justify-center">
-          <v-btn large text to="/dashboard">
-            Dashboard
-            <v-icon right>
-              {{ mdiDesktopMacDashboard }}
-            </v-icon>
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+          </v-sheet>
+          <v-card-text class="mt-10">
+            <div class="display-2 font-weight-regular">
+              Welcome to x249 ERP
+            </div>
+            <div class="display-1 font-weight-thin mt-2">
+              Your numbers presented beautifully.
+            </div>
+          </v-card-text>
+          <v-divider />
+          <v-card-actions class="justify-center">
+            <v-btn large text to="/dashboard">
+              Dashboard
+              <v-icon right>
+                {{ mdiDesktopMacDashboard }}
+              </v-icon>
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </client-only>
     </v-flex>
   </v-layout>
 </template>
