@@ -83,6 +83,12 @@ export default {
     '@nuxtjs/pwa'
   ],
   /*
+  ** Router configuration
+  */
+  router: {
+    middleware: ['mobile']
+  },
+  /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */

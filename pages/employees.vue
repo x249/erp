@@ -61,6 +61,7 @@
 <script>
 import { mdiChevronRight, mdiChevronLeft, mdiPencil, mdiDeleteForever } from '@mdi/js'
 export default {
+  layout: ({ isMobile }) => isMobile ? 'mobile' : 'default',
   head: () => ({
     title: 'Employees'
   }),

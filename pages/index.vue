@@ -1,5 +1,5 @@
 <template>
-  <v-layout class="py-5" row>
+  <v-layout class="pa-5" row>
     <v-flex xs12>
       <client-only>
         <v-card class="mx-auto text-center slight-br main-gradient inset-shadow" flat dark>
@@ -47,6 +47,7 @@
 <script>
 import { mdiDesktopMacDashboard } from '@mdi/js'
 export default {
+  layout: ({ isMobile }) => isMobile ? 'mobile' : 'default',
   head: () => ({
     title: 'Home'
   }),

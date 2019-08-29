@@ -4,6 +4,7 @@
 
 <script>
 export default {
+  layout: ({ isMobile }) => isMobile ? 'mobile' : 'default',
   head: () => ({
     title: 'Finance'
   })
