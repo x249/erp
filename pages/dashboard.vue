@@ -211,7 +211,7 @@ export default {
       title: {
         display: true,
         position: 'bottom',
-        text: 'Most medicine sold'
+        text: 'Customer Segments'
       }
     },
     lineOptions: {
