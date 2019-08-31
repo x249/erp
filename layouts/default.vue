@@ -74,7 +74,7 @@
       <template v-slot:append>
         <v-divider />
         <v-list>
-          <v-list-item link>
+          <v-list-item to="/signin">
             <v-list-item-icon>
               <v-icon color="secondary">
                 {{ mdiLogout }}
