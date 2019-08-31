@@ -1,7 +1,13 @@
 <template>
   <v-layout align-center justify-center row>
     <v-flex class="ma-5" xs12 md4>
-      <v-card id="finance-stats" height="90vh" width="auto" flat>
+      <v-card
+        id="finance-stats"
+        height="90vh"
+        width="auto"
+        flat
+        outlined
+      >
         <v-timeline class="mx-5" :dense="true">
           <v-timeline-item
             color="green lighten-2"
@@ -126,7 +132,7 @@
       </v-card>
     </v-flex>
     <v-flex class="ma-5" xs12 md6>
-      <v-card height="90vh" flat>
+      <v-card height="90vh" outlined flat>
         <client-only>
           <canvas id="mix" count="2" />
           <chartjs-line
@@ -220,7 +226,7 @@ export default {
 }
 #finance-stats::-webkit-scrollbar {
   width: 6px;
-  background-color: transparent;
+  background-color: rgba(128, 128, 128, 0.3);
 }
 #finance-stats::-webkit-scrollbar-thumb {
   background-color: grey;
