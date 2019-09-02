@@ -54,7 +54,7 @@
         </v-list-item>
         <v-list-item to="/finance">
           <v-list-item-icon>
-            <v-icon>{{ mdiCurrencyUsd }}</v-icon>
+            <v-icon>{{ mdiFinance }}</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Finance</v-list-item-title>
         </v-list-item>
@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import { mdiAccount, mdiHome, mdiDesktopMacDashboard, mdiAccountGroup, mdiCurrencyUsd, mdiSettings, mdiInformation, mdiLogout } from '@mdi/js'
+import { mdiAccount, mdiHome, mdiDesktopMacDashboard, mdiAccountGroup, mdiFinance, mdiSettings, mdiInformation, mdiLogout } from '@mdi/js'
 export default {
   data () {
     return {
@@ -102,7 +102,7 @@ export default {
       mdiHome,
       mdiDesktopMacDashboard,
       mdiAccountGroup,
-      mdiCurrencyUsd,
+      mdiFinance,
       mdiSettings,
       mdiInformation,
       mdiLogout
