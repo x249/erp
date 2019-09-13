@@ -31,7 +31,7 @@
               <v-container>
                 <v-row>
                   <v-col cols="12" sm="10" md="12">
-                    Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
+                    <span class="headline">Sales increasing</span>
                   </v-col>
                 </v-row>
               </v-container>
@@ -60,7 +60,7 @@
               <v-container>
                 <v-row>
                   <v-col cols="12" sm="10" md="12">
-                    Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
+                    <span class="headline">Sales steady</span>
                   </v-col>
                 </v-row>
               </v-container>
@@ -93,7 +93,7 @@
                     sm="10"
                     md="12"
                   >
-                    Lorem ipsum dolor sit amet, no nam oblique veritus no nam oblique.
+                    <span class="headline">Sales increased</span>
                   </v-col>
                 </v-row>
               </v-container>
@@ -122,7 +122,65 @@
               <v-container>
                 <v-row>
                   <v-col cols="12" sm="10" md="12">
-                    Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus.
+                    <span class="headline">Sales decreased</span>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item
+            color="red lighten-1"
+            fill-dot
+            left
+            small
+          >
+            <v-card class="slight-br">
+              <v-card-title class="red lighten-1 justify-end">
+                <h2 class="title mr-4 white--text font-weight-light">
+                  August 26 - 2019
+                </h2>
+                <v-spacer />
+                <v-icon
+                  dark
+                  size="42"
+                >
+                  {{ mdiTrendingDown }}
+                </v-icon>
+              </v-card-title>
+              <v-container>
+                <v-row>
+                  <v-col cols="12" sm="10" md="12">
+                    <span class="headline">Sales decreased</span>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item
+            color="red lighten-1"
+            fill-dot
+            left
+            small
+          >
+            <v-card class="slight-br">
+              <v-card-title class="red lighten-1 justify-end">
+                <h2 class="title mr-4 white--text font-weight-light">
+                  August 25 - 2019
+                </h2>
+                <v-spacer />
+                <v-icon
+                  dark
+                  size="42"
+                >
+                  {{ mdiTrendingDown }}
+                </v-icon>
+              </v-card-title>
+              <v-container>
+                <v-row>
+                  <v-col cols="12" sm="10" md="12">
+                    <span class="headline">Sales decreased</span>
                   </v-col>
                 </v-row>
               </v-container>
