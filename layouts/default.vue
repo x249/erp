@@ -7,7 +7,7 @@
       app
     >
       <template v-slot:prepend>
-        <v-list>
+        <v-list nav dense>
           <v-list-item
             to="/profile"
             two-line
