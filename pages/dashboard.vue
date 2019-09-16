@@ -26,11 +26,11 @@
         </v-sheet>
         <v-card-text class="pt-0">
           <div class="title font-weight-light mb-2">
-            Server Traffic Load
+            Revenue
           </div>
           <div class="subheading font-weight-light green--text">
-            Cluster Autoscaling Active <v-icon color="green">
-              {{ mdiGaugeFull }}
+            Decreasing <v-icon color="green">
+              {{ mdiTrendingDown }}
             </v-icon>
           </div>
           <v-divider class="my-2" />
@@ -70,10 +70,12 @@
         </v-sheet>
         <v-card-text class="pt-0">
           <div class="title font-weight-light mb-2">
-            User Registrations
+            Sales
           </div>
-          <div class="subheading font-weight-light grey--text">
-            Last Campaign Performance
+          <div class="subheading font-weight-light green--text">
+            Increasing <v-icon color="green">
+              {{ mdiTrendingUp }}
+            </v-icon>
           </div>
           <v-divider class="my-2" />
           <v-icon
@@ -175,7 +177,7 @@
 </template>
 
 <script>
-import { mdiClock, mdiTrendingUp, mdiGaugeFull } from '@mdi/js'
+import { mdiClock, mdiTrendingUp, mdiTrendingDown } from '@mdi/js'
 export default {
   layout: ({ isMobile }) => isMobile ? 'mobile' : 'default',
   head: () => ({
@@ -184,7 +186,7 @@ export default {
   data: () => ({
     mdiClock,
     mdiTrendingUp,
-    mdiGaugeFull,
+    mdiTrendingDown,
     labels: [
       '12am',
       '3am',
